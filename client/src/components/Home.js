@@ -32,6 +32,14 @@ const tech_list = technologies.map(url => {
     return <img key={url} src={url}/>
 });
 
+const testBackend = () => {
+  fetch('/test')
+  .then(res => res.json())
+  .then(data => console.log(data))
+};
+testBackend();
+
+
 function Home () {
     return (
         <>
