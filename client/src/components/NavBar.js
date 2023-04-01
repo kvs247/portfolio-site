@@ -9,15 +9,21 @@ function NavBar () {
     return (
         <Header>
           <nav>
+
             <NavLink exact to='/'>Home</NavLink>
+
             <NavLink to='/about'>About</NavLink>
+
             <NavLink to={resume_pdf} target='_blank'>Resume</NavLink>
+
             <NavLink to={{pathname: 'https://github.com/kschneider0'}} target="_blank">
               <Logo src={github_img} alt='' />
             </NavLink>
+
             <NavLink to={{pathname: 'https://www.linkedin.com/in/kyle-v-schneider/'}} target="_blank">
               <Logo src={linkedin_img} alt='' />
-            </NavLink>            
+            </NavLink>         
+               
           </nav>    
         </Header>
     );

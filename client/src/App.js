@@ -1,6 +1,8 @@
-import NavBar from "./components/NavBar";
-import { Route, Switch } from "react-router-dom";
-import { createGlobalStyle } from "styled-components";
+import { Route, Switch } from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components';
+
+import NavBar from './components/NavBar';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
       <Switch>
 
         <Route exact path='/'>
-          <h1>Home</h1>
+          <Home />
         </Route>
 
         <Route path='/about'>
