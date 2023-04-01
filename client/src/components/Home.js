@@ -29,7 +29,7 @@ const technologies = [
   ]
 
 const tech_list = technologies.map(url => {
-    return <img key={url} src={url}/>
+    return <img key={url} src={url} alt='' />
 });
 
 const testBackend = () => {
@@ -44,7 +44,7 @@ function Home () {
     return (
         <>
           <IntroDiv id='title-div'>
-            <img src={selfie_jpg} />
+            <img src={selfie_jpg} alt='' />
             <h1>Kyle Schneider</h1>
             <h2>Software Developer</h2>
             <p>
