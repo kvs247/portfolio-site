@@ -1,7 +1,17 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import ProjectCard from './ProjectCard';
+
+
 import selfie_jpg from '../assets/selfie.jpg';
+
+// project screenshots
+import chess_img from '../assets/chess.png';
+import thesis_img from '../assets/thesis-snipet.png';
+import ggg_img from '../assets/GGG.PNG';
+
+// technology logos
 import python_img from '../assets/python.png';
 import flask_img from '../assets/flask.png';
 import javascript_img from '../assets/javascript.png';
@@ -45,6 +55,27 @@ function Home () {
 
           <ProjectsDiv>
 
+            <ProjectCard
+              title='Chess is Hard'
+              description='Play chess against your friends or against the computer.'
+              image={chess_img}
+              url='https://chess-is-hard.onrender.com/'
+            />
+
+            <ProjectCard
+              title='Mathematics Honors Thesis'
+              description='Research tool for computing the Laplacian Leader Follower Dynamics of graphs (networks).'
+              image={thesis_img}
+              url=''
+            />
+
+            <ProjectCard
+              title={'Gaben\'s Game Gallery'}
+              description='Browse, search, save, and edit games on the RAWG API.'
+              image={ggg_img}
+              url=''
+            />
+
           </ProjectsDiv>
 
         </>
@@ -81,7 +112,6 @@ const TechnologiesDiv = styled.div`
 `
 
 const ProjectsDiv = styled.div`
-    border: 5px solid var(--white);
     width: 75%;
     margin: 25px auto;
 `
