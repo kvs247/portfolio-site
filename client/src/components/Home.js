@@ -67,7 +67,7 @@ function Home () {
               title='Chess is Hard'
               description='Play chess against your friends or against the computer.'
               image={chess_img}
-              url='https://chess-is-hard.onrender.com/'
+              url='https://chess.kvschneider.com/'
             />
 
             <ProjectCard
