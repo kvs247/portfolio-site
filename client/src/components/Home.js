@@ -74,14 +74,14 @@ function Home () {
               title='Mathematics Honors Thesis'
               description='Research tool for computing the Laplacian Leader Follower Dynamics of graphs (networks).'
               image={thesis_img}
-              url=''
+              url='https://github.com/Schnyle/laplacian-leader-follower-dynamics'
             />
 
             <ProjectCard
               title={'Gaben\'s Game Gallery'}
               description='Browse, search, save, and edit games on the RAWG API.'
               image={ggg_img}
-              url=''
+              url='https://github.com/triciahughes/gabensgames'
             />
 
           </ProjectsDiv>
