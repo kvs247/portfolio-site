@@ -29,9 +29,10 @@ function About() {
                   justifyContent='center'  
                   alignItems='center'
                 >
-                    {books.map(book => {
+                    {books.map((book, index) => {
                         return (
                             <Box 
+                              key={index}
                               component='img'   
                               src={book} 
                               alt='' 
