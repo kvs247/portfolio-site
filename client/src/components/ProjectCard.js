@@ -1,41 +1,49 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 
 function ProjectCard({ title, description, image, url }) {
     return (
-        <Card>
-          <StyledLink to={{ pathname: `${url}` }} target='_blank'>
-            <h1>{title}</h1>
-            <p>{description}</p>
-            <img src={image} alt='' />
-          </StyledLink>
-        </Card>
+        <Box
+          sx={{
+            bgcolor: '#191919',
+            borderRadius: '10px',
+            border: '1px solid #e1e1e1',
+            width: '80%',
+            mb: '50px',
+            mx: 'auto',
+            p: '20px',
+            textAlign: 'center',
+            transition: '0.5s',
+            '&:hover': {
+              transform: 'scale(1.05)'
+            }
+          }}
+        >
+          <Link 
+            to={{ pathname: `${url}` }} 
+            target='_blank'
+            sx={{
+              color: '#e1e1e1',
+              textDecoration: 'none',
+              cursor: 'pointer',
+            }}
+          >
+            <Typography variant='h1'>{title}</Typography>
+            <Typography>{description}</Typography>
+            <Box 
+              component='img'
+              src={image} 
+              alt='' 
+              sx={{
+                width: '75%',
+
+              }}
+            />
+          </Link>
+        </Box>
     );
 }
 
 export default ProjectCard;
-
-const Card = styled.div`
-    background-color: var(--light-grey);
-    border-radius: 10px;
-    border: 1px solid var(--white);
-    margin-bottom: 50px;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
-    transition: 0.5s;
-    width: 80%;
-
-    &:hover {
-        transform: scale(1.05);
-    }
-
-    img {
-        width: 75%;
-    }
-`;
-
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: var(--white);
-`;
