@@ -5,6 +5,15 @@ import Typography from '@mui/material/Typography';
 
 function ProjectCard({ title, description, image, url }) {
     return (
+      <Link 
+        to={{ pathname: `${url}` }} 
+        target='_blank'
+        sx={{
+          color: '#e1e1e1',
+          textDecoration: 'none',
+          cursor: 'pointer',
+        }}
+      >
         <Box
           sx={{
             bgcolor: '#191919',
@@ -21,15 +30,6 @@ function ProjectCard({ title, description, image, url }) {
             }
           }}
         >
-          <Link 
-            to={{ pathname: `${url}` }} 
-            target='_blank'
-            sx={{
-              color: '#e1e1e1',
-              textDecoration: 'none',
-              cursor: 'pointer',
-            }}
-          >
             <Typography variant='h1'>{title}</Typography>
             <Typography>{description}</Typography>
             <Box 
@@ -41,8 +41,8 @@ function ProjectCard({ title, description, image, url }) {
 
               }}
             />
-          </Link>
         </Box>
+      </Link>
     );
 }
 
