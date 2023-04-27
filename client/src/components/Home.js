@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 
 import ProjectCard from './ProjectCard';
 
