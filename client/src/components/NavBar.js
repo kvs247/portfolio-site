@@ -1,59 +1,96 @@
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components'
+import AppBar from '@mui/material/AppBar';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 
 import resume_pdf from '../assets/resume.pdf';
 import github_img from '../assets/github.png';
 import linkedin_img from '../assets/linkedin.png';
+import { Typography } from '@mui/material';
 
 function NavBar () {
     return (
-        <Header>
-          <nav>
-
-            <NavLink exact to='/'>Home</NavLink>
-
-            <NavLink to='/about'>About</NavLink>
-
-            <NavLink to={resume_pdf} target='_blank'>Resume</NavLink>
-
-            <NavLink to={{pathname: 'https://github.com/kschneider0'}} target="_blank">
-              <Logo src={github_img} alt='' />
-            </NavLink>
-
-            <NavLink to={{pathname: 'https://www.linkedin.com/in/kyle-v-schneider/'}} target="_blank">
-              <Logo src={linkedin_img} alt='' />
-            </NavLink>         
-               
-          </nav>    
-        </Header>
+        <AppBar
+          sx={{ 
+            height: '3rem', 
+            justifyContent: 'center', 
+            backgroundColor: '#000000', 
+            py: '1rem',
+          }}
+        >
+          <Container 
+            sx={{ 
+              display: 'flex', 
+              justifyContent: 'flex-start',
+              alignItems: 'center',
+              marginLeft: 0,
+            }}
+          >
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mx: 2,
+                color: '#e1e1e1',
+                textDecoration: 'none',
+              }}              
+            >
+              HOME
+            </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/about"
+              sx={{
+                mx: 2,
+                color: '#e1e1e1',
+                textDecoration: 'none',
+              }}              
+            >
+              ABOUT
+            </Typography>  
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href={resume_pdf}
+              target='_blank'
+              sx={{
+                mx: 2,
+                color: '#e1e1e1',
+                textDecoration: 'none',
+              }}              
+            >
+              RESUME
+            </Typography>    
+            <Link   
+              href='https://github.com/kschneider0'
+              target='_blank'
+            >          
+              <Box
+                component='img'
+                src={github_img}
+                alt=''
+                sx={{ mx: 2, height: '2rem'}}
+              />                    
+            </Link>
+            <Link   
+              href='https://www.linkedin.com/in/kyle-v-schneider'
+              target='_blank'
+            >          
+              <Box
+                component='img'
+                src={linkedin_img}
+                alt=''
+                sx={{ mx: 2, height: '2rem'}}
+              />                    
+            </Link>            
+          </Container>
+        </AppBar>
     );
 }
 
 export default NavBar;
-
-const Header = styled.header`
-    align-items: center;
-    background-color: grey;
-    border: 1px solid var(--white);
-    display: flex;
-    height: 40px;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
-
-    nav > * {
-        margin: 0 20px;
-        text-decoration: none;
-        color: var(--black);
-
-        &:active, &:focus, &:hover, &.active {
-            color: var(--white);
-        }
-    }
-`
-
-const Logo = styled.img`
-    height: 20px;
-`

@@ -33,11 +33,11 @@ const GlobalStyle = createGlobalStyle`
       --dark-grey: #111;
       --white: #fff;
       --baby-blue: #871F78;
-      --black: black;
+      --black: #000000;
     }
     
     body {
-      background-color: var(--dark-grey);
+      background-color: var(--black);
       margin-top: 40px;
       padding: 30px;
       color: var(--white);

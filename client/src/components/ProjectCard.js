@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 function ProjectCard({ title, description, image, url }) {
     return (
       <Link 
-        // to={{ pathname: `${url}` }} 
         href={`${url}`}
         target='_blank'
         sx={{

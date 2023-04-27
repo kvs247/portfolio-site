@@ -51,7 +51,10 @@ function Home () {
             <p>
               I am a software developer with a passion for learning and creating.
               <br />
-                <Link to='/about'>Click</Link> to learn more about who I am.
+                <Link to='/about' style={{ color: '#e1e1e1'}}>
+                  Click here
+                </Link> 
+              {' '}to learn more about who I am.
             </p>
           </IntroDiv>
 
@@ -62,9 +65,9 @@ function Home () {
             </div>
           </TechnologiesDiv>
 
-          <Typography variant='h2' textAlign='center' my='3'>Projects</Typography>
 
           <ProjectsDiv>
+            <h2>Projects</h2>
 
             <ProjectCard
               title='Chess is Hard'
@@ -125,4 +128,5 @@ const TechnologiesDiv = styled.div`
 const ProjectsDiv = styled.div`
     width: 75%;
     margin: 25px auto;
+    text-align: center;
 `
