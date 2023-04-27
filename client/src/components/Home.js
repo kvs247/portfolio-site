@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Typography from '@mui/material/Typography';
 
 import ProjectCard from './ProjectCard';
 
@@ -60,6 +61,8 @@ function Home () {
                 {tech_list}
             </div>
           </TechnologiesDiv>
+
+          <Typography variant='h2' textAlign='center' my='3'>Projects</Typography>
 
           <ProjectsDiv>
 
