@@ -92,6 +92,8 @@ function Home () {
 
           </ProjectsDiv>
 
+          <h1 id="place">place</h1>
+
         </>
     );
 }
