@@ -48,13 +48,16 @@ const gridItem = (name, path) => {
 
 function Skills () {
     return (
-        <Container sx={{
-          display: 'flex', 
-          flexDirection: 'column', 
-          alignItems: 'center',
-          width: '80%',
-          mx: 'auto',
-        }}>
+        <Container 
+          maxWidth='none'
+          sx={{
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center',
+            width: '75%',
+            mx: 'auto',
+            mb: '25vh'
+          }}>
           <Typography 
             id='skills'
             variant='h2'

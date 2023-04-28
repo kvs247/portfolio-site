@@ -12,7 +12,12 @@ function About() {
     return (
         <Container
           id='about'
-          sx={{ mx: 'auto', mb: '25vh'}}
+          maxWidth='none'
+          sx={{ 
+            mx: 'auto', 
+            mb: '25vh',
+            width: '75%',
+          }}
         >
             <Typography variant='h2' textAlign='center'>About</Typography>
             <Box>
@@ -26,7 +31,13 @@ function About() {
             </Box>
             <Box>
                 {/* Books */}
-                <Typography variant='h3'>Books I'm Reading</Typography>
+                <Typography 
+                  variant='h3' 
+                  textAlign='center'
+                  sx={{ mt: '5vh' }}
+                >
+                  Books I'm Reading
+                </Typography>
                 <Box 
                   display='flex' 
                   flexDirection='row' 
@@ -41,8 +52,8 @@ function About() {
                               src={book} 
                               alt='' 
                               sx={{
-                                height: '18rem',
-                                width: '11rem',
+                                height: '18vw',
+                                width: '12vw',
                                 mx: 2
                               }}
                             />

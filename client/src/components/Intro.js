@@ -1,4 +1,3 @@
-import { Link as ScrollLink } from 'react-scroll';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -9,13 +8,14 @@ function Intro() {
     return (
         <Container 
           id='intro'
+          maxWidth='none'
           sx={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-evenly',
             mt: '25vh',
             mb: '25vh',
-            width: '80vw',
+            width: '75%',
           }}
         >
           <Box
@@ -23,8 +23,8 @@ function Intro() {
             src={selfie_jpg}
             alt='headshot of Kyle Schneider'
             sx={{
-              height: '20rem',
-              width: '20rem',
+              height: '35%',
+              width: '35%',
               borderRadius: '10px',
             }}
           />
