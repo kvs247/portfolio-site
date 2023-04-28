@@ -51,13 +51,13 @@ function NavBar() {
         }}
       >
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Typography variant="h6">
+          <Typography variant="h6" noWrap>
             KYLE SCHNEIDER
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
 
-          {navLink('title-div', 'HOME')}
+          {navLink('intro', 'HOME')}
 
           {navLink('about', 'ABOUT')}
 

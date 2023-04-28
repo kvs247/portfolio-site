@@ -12,9 +12,9 @@ function About() {
     return (
         <Container
           id='about'
-          sx={{ mx: 'auto'}}
+          sx={{ mx: 'auto', mb: '25vh'}}
         >
-            <Typography variant='h2'>About</Typography>
+            <Typography variant='h2' textAlign='center'>About</Typography>
             <Box>
                 <Typography>
                     As a dedicated and self-motivated software developer and researcher, I am constantly seeking out new challenges that allow me to grow and learn. With a strong background in mathematics and science, I am passionate about using technology to solve complex problems and make a positive impact in the world. I thrive on innovation and creativity, and I am committed to pushing the boundaries of what is possible through my work.
