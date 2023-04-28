@@ -58,6 +58,7 @@ function NavBar() {
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           {navLink('title-div', 'HOME')}
           {navLink('place', 'ABOUT')}
+          {navLink('skills', 'SKILLS')}
           <Typography
             variant="h6"
             component="a"
