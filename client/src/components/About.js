@@ -10,8 +10,11 @@ const books = [book1, book2, book3, book4]
 
 function About() {
     return (
-        <Container>
-            <Typography variant='h1'>About</Typography>
+        <Container
+          id='about'
+          sx={{ mx: 'auto'}}
+        >
+            <Typography variant='h2'>About</Typography>
             <Box>
                 <Typography>
                     As a dedicated and self-motivated software developer and researcher, I am constantly seeking out new challenges that allow me to grow and learn. With a strong background in mathematics and science, I am passionate about using technology to solve complex problems and make a positive impact in the world. I thrive on innovation and creativity, and I am committed to pushing the boundaries of what is possible through my work.
@@ -22,7 +25,8 @@ function About() {
                 </Typography>
             </Box>
             <Box>
-                <Typography variant='h2'>Books I'm Reading</Typography>
+                {/* Books */}
+                <Typography variant='h3'>Books I'm Reading</Typography>
                 <Box 
                   display='flex' 
                   flexDirection='row' 
@@ -37,8 +41,8 @@ function About() {
                               src={book} 
                               alt='' 
                               sx={{
-                                height: '30rem',
-                                width: '17.5rem',
+                                height: '18rem',
+                                width: '11rem',
                                 mx: 2
                               }}
                             />

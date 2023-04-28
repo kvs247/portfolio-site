@@ -56,9 +56,17 @@ function NavBar() {
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
+
           {navLink('title-div', 'HOME')}
-          {navLink('place', 'ABOUT')}
+
+          {navLink('about', 'ABOUT')}
+
           {navLink('skills', 'SKILLS')}
+
+          {navLink('projects', 'PROJECTS')}
+
+          {navLink('contact', 'CONTACT')}
+
           <Typography
             variant="h6"
             component="a"
@@ -72,12 +80,15 @@ function NavBar() {
           >
             RESUME
           </Typography>
+
           <Link href="https://github.com/kschneider0" target="_blank">
             <Box component="img" src={github_img} alt="" sx={{ mx: 2, height: '2rem' }} />
           </Link>
+
           <Link href="https://www.linkedin.com/in/kyle-v-schneider" target="_blank">
             <Box component="img" src={linkedin_img} alt="" sx={{ mx: 2, height: '2rem' }} />
           </Link>
+
         </Box>
       </Container>
     </AppBar>

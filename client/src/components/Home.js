@@ -12,13 +12,14 @@ import thesis_img from '../assets/thesis-snipet.png';
 import ggg_img from '../assets/GGG.PNG';
 
 import Skills from './Skills.js';
+import About from './About.js';
 
-const testBackend = () => {
-  fetch('/test')
-  .then(res => res.json())
-  .then(data => console.log(data))
-};
-testBackend();
+// const testBackend = () => {
+//   fetch('/test')
+//   .then(res => res.json())
+//   .then(data => console.log(data))
+// };
+// testBackend();
 
 
 function Home () {
@@ -38,10 +39,12 @@ function Home () {
             </p>
           </IntroDiv>
 
+          <About />
+
           <Skills />
-          
+
           <ProjectsDiv>
-            <h2>Projects</h2>
+            <h2 id='projects'>Projects</h2>
 
             <ProjectCard
               title='Chess is Hard'
@@ -66,7 +69,7 @@ function Home () {
 
           </ProjectsDiv>
 
-          <h1 id="place">place</h1>
+          <h1 id="contact">CONTACT ME</h1>
 
         </>
     );

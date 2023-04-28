@@ -15,10 +15,14 @@ const theme = createTheme({
   },
   typography: {
     h1: {
-      fontSize: '3rem',
+      fontSize: '4rem',
       color: '#E1E1E1',
     },
     h2: {
+      fontSize: '3rem',
+      color: '#E1E1E1',
+    },
+    h3: {
       fontSize: '2rem',
       color: '#E1E1E1',
     }

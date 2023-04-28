@@ -24,9 +24,7 @@ function ProjectCard({ title, description, image, url }) {
             p: '20px',
             textAlign: 'center',
             transition: '0.5s',
-            '&:hover': {
-              transform: 'scale(1.05)'
-            }
+            '&:hover': { transform: 'scale(1.05)' }
           }}
         >
             <Typography variant='h1'>{title}</Typography>

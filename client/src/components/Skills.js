@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
 // technology logos
 import python_img from '../assets/technologies/python.png';
@@ -18,7 +19,7 @@ import render_img from '../assets/technologies/render.png';
 
 const gridItem = (name, path) => {
     return (
-        <Box
+        <Container
           sx={{
             width: '15rem',
             height: '8rem',
@@ -29,6 +30,8 @@ const gridItem = (name, path) => {
             m: 'auto',
             p: 1,
             borderRadius: '10px',
+            transition: '0.5s',
+            '&:hover': { transform: 'scale(1.05)' }
           }}
         >
           <Box
@@ -39,21 +42,26 @@ const gridItem = (name, path) => {
             mr={2}
           />
           <Typography>{name}</Typography>
-        </Box>
+        </Container>
     );
 };
 
 function Skills () {
     return (
-        <Box sx={{
+        <Container sx={{
           display: 'flex', 
           flexDirection: 'column', 
-          justifyContent: 'center', 
           alignItems: 'center',
           width: '80%',
           mx: 'auto',
         }}>
-          <Typography variant='h2' id='skills'>Skills</Typography>
+          <Typography 
+            id='skills'
+            variant='h2'
+            my={4} 
+          >
+            Skills
+          </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center' }}>
             <Grid container spacing={4}>
               <Grid item xs={3}>
@@ -94,7 +102,7 @@ function Skills () {
               </Grid>                            
             </Grid>
           </Box>
-      </Box>
+      </Container>
     );
 }
 
