@@ -81,7 +81,7 @@ function NavBar() {
             RESUME
           </Typography>
 
-          <Link href="https://github.com/kschneider0" target="_blank">
+          <Link href="https://github.com/kvschneider0" target="_blank">
             <Box component="img" src={github_img} alt="" sx={{ mx: 2, height: '2rem' }} />
           </Link>
 
