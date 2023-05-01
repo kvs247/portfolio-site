@@ -14,10 +14,10 @@ function Contact() {
           <Box
             sx={{ border: '1px solid white', borderRadius: '10px', p: 2, mt: 2 }}
           >
-            <Typography variant='h4' textAlign='center'>
+            <Typography variant='h3' textAlign='center'>
               Email: kylesch115@gmail.com
             </Typography>
-            <Typography variant='h4' textAlign='center'>
+            <Typography variant='h3' textAlign='center'>
               LinkedIn: https://www.linkedin.com/in/kyle-v-schneider/
             </Typography>            
           </Box>

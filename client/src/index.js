@@ -25,7 +25,11 @@ const theme = createTheme({
     h3: {
       fontSize: '2rem',
       color: '#E1E1E1',
-    }
+    },
+    h4: {
+      fontSize: '1.5rem',
+      color: '#E1E1E1',
+    }    
   },
 });
 

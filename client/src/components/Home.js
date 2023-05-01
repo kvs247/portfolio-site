@@ -1,12 +1,4 @@
 import styled from 'styled-components';
-import Box from '@mui/material/Box';
-
-import ProjectCard from './ProjectCard';
-
-// project screenshots
-import chess_img from '../assets/chess.png';
-import thesis_img from '../assets/thesis-snipet.png';
-import ggg_img from '../assets/GGG.PNG';
 
 import Intro from './Intro.js';
 import About from './About.js';
