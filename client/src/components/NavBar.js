@@ -17,6 +17,18 @@ const navLink = (toId, text) => {
         smooth={true}
         offset={-70}
         duration={500}
+        onClick={() => {
+          if (window.location.pathname !== '/') {
+            window.location.href = '/#' + toId;
+            // scroll.scrollTo('/#' + toId)
+            setTimeout(() => {
+              const element = document.getElementById(toId);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }, 100);
+          }
+        }}        
       >
         <Typography
           variant="h6"
