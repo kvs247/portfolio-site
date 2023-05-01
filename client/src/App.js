@@ -3,7 +3,9 @@ import { createGlobalStyle } from 'styled-components';
 
 import NavBar from './components/NavBar.js';
 import Home from './components/Home.js';
-import About from './components/About.js'
+import Chess from './components/Chess.js';
+import Games from './components/Games.js';
+import Math from './components/Math.js';
 
 function App() {
   return (
@@ -16,9 +18,17 @@ function App() {
           <Home />
         </Route>
 
-        <Route path='/about'>
-          <About />
+        <Route path='/chess'>
+          <Chess />
         </Route>
+
+        <Route path='/games'>
+          <Games />
+        </Route>
+
+        <Route path='/math'>
+          <Math />
+        </Route>                
 
       </Switch>
     </>
@@ -28,19 +38,7 @@ function App() {
 export default App;
 
 const GlobalStyle = createGlobalStyle`
-    :root {
-      --light-grey: #191919;
-      --dark-grey: #111;
-      --white: #fff;
-      --baby-blue: #871F78;
-      --black: #000000;
-    }
-    
     body {
-      background-color: var(--black);
-      margin-top: 40px;
-      padding: 30px;
-      color: var(--white);
-      font-family: 'Arial';
+      background-color: #000000;
     }
 `

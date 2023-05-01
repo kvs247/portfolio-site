@@ -57,7 +57,8 @@ function Skills () {
             width: '75%',
             mx: 'auto',
             mb: '25vh'
-          }}>
+          }}
+        >
           <Typography 
             id='skills'
             variant='h2'

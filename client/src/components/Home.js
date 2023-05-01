@@ -11,6 +11,7 @@ import ggg_img from '../assets/GGG.PNG';
 import Intro from './Intro.js';
 import About from './About.js';
 import Skills from './Skills.js';
+import Projects from './Projects.js';
 import Contact from './Contact.js';
 
 // const testBackend = () => {
@@ -30,7 +31,9 @@ function Home () {
 
           <Skills />
 
-          <Box sx={{ mb: '25vh' }}>
+          <Projects />
+
+          {/* <Box sx={{ mb: '25vh' }}>
             <ProjectsDiv>
               <h2 id='projects'>Projects</h2>
 
@@ -56,7 +59,7 @@ function Home () {
               />
 
             </ProjectsDiv>
-          </Box>
+          </Box> */}
 
           <Contact />
 
