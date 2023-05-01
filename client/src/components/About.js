@@ -21,7 +21,7 @@ function About() {
         >
             <Typography variant='h2' textAlign='center'>About</Typography>
             <Box>
-                <Typography>
+                <Typography color='#e1e1e1'>
                     As a dedicated and self-motivated software developer and researcher, I am constantly seeking out new challenges that allow me to grow and learn. With a strong background in mathematics and science, I am passionate about using technology to solve complex problems and make a positive impact in the world. I thrive on innovation and creativity, and I am committed to pushing the boundaries of what is possible through my work.
 
                     Whether I am conducting research, developing software solutions, or exploring new fields of knowledge, I am always seeking out opportunities to expand my skills and expertise. As someone who thrives on challenge, I am constantly pushing myself to learn and grow in my work. With a keen eye for detail and a results-driven mindset, I am able to deliver exceptional work that meets the needs of my clients and collaborators.

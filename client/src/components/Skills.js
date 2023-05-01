@@ -41,7 +41,7 @@ const gridItem = (name, path) => {
             height='5rem'
             mr={2}
           />
-          <Typography>{name}</Typography>
+          <Typography color='#e1e1e1'>{name}</Typography>
         </Container>
     );
 };
