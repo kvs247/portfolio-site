@@ -9,7 +9,7 @@ function Chess() {
           description='Browse popular video game titles and save them to your account. Saved games can be edited and removed, and
           new games can be created.'
           links={[
-            ['GitHub', 'https://github.com/triciahughes/gabensgames'],
+            ['GitHub', 'https://github.com/kvschneider0/gabensgames'],
             ['Demo', 'https://youtu.be/-IkQI78ORaQ'],
           ]}
           image={ggg_img}
