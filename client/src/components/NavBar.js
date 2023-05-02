@@ -1,9 +1,14 @@
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+import MenuIcon from '@mui/icons-material/Menu';
+import Button from '@mui/material/Button';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import { Typography } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
+import { useMediaQuery } from '@mui/material';
 
 import resume_pdf from '../assets/resume.pdf';
 import github_img from '../assets/github.png';
@@ -45,7 +50,79 @@ const navLink = (toId, text) => {
     );
 };
 
+const links = () => {
+  return (
+    <>  
+      {navLink('intro', 'HOME')}
+      {navLink('about', 'ABOUT')}
+      {navLink('skills', 'SKILLS')}
+      {navLink('projects', 'PROJECTS')}
+      {navLink('contact', 'CONTACT')}
+      
+      <Typography
+        variant="h6"
+        component="a"
+        href={resume_pdf}
+        target="_blank"
+        sx={{
+          mx: 2,
+          color: '#e1e1e1',
+          textDecoration: 'none',
+        }}
+      >
+        RESUME
+      </Typography>
+
+      <Link href="https://github.com/kvschneider0" target="_blank">
+        <Box component="img" src={github_img} alt="" sx={{ mx: 2, height: '2rem' }} />
+      </Link>
+
+      <Link href="https://www.linkedin.com/in/kyle-v-schneider" target="_blank">
+        <Box component="img" src={linkedin_img} alt="" sx={{ mx: 2, height: '2rem' }} />
+      </Link>
+    </>
+  );
+};
+
+
 function NavBar() {
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down(1080));
+  
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const toggleDrawer = (event) => {
+    if (
+      event &&
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+      ) { return; }
+      setIsDrawerOpen(!isDrawerOpen);
+    };
+    
+  const renderMobileMenu = () => {
+    return (
+      <>
+        <Button onClick={() => toggleDrawer()}>
+          <MenuIcon />
+        </Button>
+        <SwipeableDrawer
+          open={isDrawerOpen}
+          onOpen={toggleDrawer}
+          onClose={toggleDrawer}
+          >
+          {links()}
+        </SwipeableDrawer>
+      </>
+    );
+  };
+  
+  const renderDesktopMenu = () => {
+    return (
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        {links()}
+      </Box>
+    );
+  };
+
   return (
     <AppBar
 
@@ -67,41 +144,7 @@ function NavBar() {
             KYLE SCHNEIDER
           </Typography>
         </Box>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-
-          {navLink('intro', 'HOME')}
-
-          {navLink('about', 'ABOUT')}
-
-          {navLink('skills', 'SKILLS')}
-
-          {navLink('projects', 'PROJECTS')}
-
-          {navLink('contact', 'CONTACT')}
-
-          <Typography
-            variant="h6"
-            component="a"
-            href={resume_pdf}
-            target="_blank"
-            sx={{
-              mx: 2,
-              color: '#e1e1e1',
-              textDecoration: 'none',
-            }}
-          >
-            RESUME
-          </Typography>
-
-          <Link href="https://github.com/kvschneider0" target="_blank">
-            <Box component="img" src={github_img} alt="" sx={{ mx: 2, height: '2rem' }} />
-          </Link>
-
-          <Link href="https://www.linkedin.com/in/kyle-v-schneider" target="_blank">
-            <Box component="img" src={linkedin_img} alt="" sx={{ mx: 2, height: '2rem' }} />
-          </Link>
-
-        </Box>
+        {isMobile ? renderMobileMenu() : renderDesktopMenu()}
       </Container>
     </AppBar>
   );
