@@ -14,6 +14,7 @@ function Chess() {
           ]}
           image={ggg_img}
           notes={[
+            'Constructed a front-end UI with React with React to create a single-page application',
             'Implemented Git for version control to track changes and collaborate with team members',
             'Utilized CSS to create an attractive user interface and improve user experience',
           ]}
