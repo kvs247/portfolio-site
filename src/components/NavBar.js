@@ -50,6 +50,10 @@ const navLink = (toId, text) => {
     );
 };
 
+const handleClickResume = () => {
+  window.open(resume_pdf, "_blank");
+};
+
 const links = () => {
   return (
     <>  
@@ -62,12 +66,13 @@ const links = () => {
       <Typography
         variant="h6"
         component="a"
-        href={resume_pdf}
+        onClick={handleClickResume}
         target="_blank"
         sx={{
           mx: 2,
           color: '#e1e1e1',
           textDecoration: 'none',
+          cursor: 'pointer',
         }}
       >
         RESUME
