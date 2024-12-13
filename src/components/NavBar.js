@@ -55,6 +55,8 @@ const handleClickResume = () => {
   const baseUrl = window.location.origin;
   const resumeUrl = `${baseUrl}/resume.pdf`;
   
+  console.log("resumeURL", resumeUrl)
+
   // Create and trigger a download link
   const link = document.createElement('a');
   link.href = resumeUrl;
