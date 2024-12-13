@@ -51,7 +51,8 @@ const navLink = (toId, text) => {
 };
 
 const handleClickResume = () => {
-  window.open("/resume.pdf", "_blank");
+  const resumeUrl = `${process.env.PUBLIC_URL}/resume.pdf`;
+  window.open(resumeUrl, "_blank");
 };
 
 const links = () => {
