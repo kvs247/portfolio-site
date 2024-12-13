@@ -51,8 +51,18 @@ const navLink = (toId, text) => {
 };
 
 const handleClickResume = () => {
-  const resumeUrl = `${process.env.PUBLIC_URL}/resume.pdf`;
-  window.open(resumeUrl, "_blank");
+  // Get the base URL of your deployed site
+  const baseUrl = window.location.origin;
+  const resumeUrl = `${baseUrl}/resume.pdf`;
+  
+  // Create and trigger a download link
+  const link = document.createElement('a');
+  link.href = resumeUrl;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 };
 
 const links = () => {
