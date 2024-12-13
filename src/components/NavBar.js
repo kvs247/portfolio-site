@@ -51,7 +51,7 @@ const navLink = (toId, text) => {
 };
 
 const handleClickResume = () => {
-  const resumeUrl = "https://kvs-resume.s3.amazonaws.com/Resume_WIP.pdf"
+  const resumeUrl = "https://kvs-resume.s3.amazonaws.com/resume.pdf"
   window.location.href = resumeUrl;
 };
 
