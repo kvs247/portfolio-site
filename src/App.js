@@ -28,7 +28,11 @@ function App() {
 
         <Route path='/math'>
           <Math />
-        </Route>                
+        </Route>
+
+        <Route path='*'>
+          <Home />
+        </Route>
 
       </Switch>
     </>

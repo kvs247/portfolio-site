@@ -51,20 +51,23 @@ const navLink = (toId, text) => {
 };
 
 const handleClickResume = () => {
-  // Get the base URL of your deployed site
   const baseUrl = window.location.origin;
-  const resumeUrl = `${baseUrl}/resume.pdf`;
-  
-  console.log("resumeURL", resumeUrl)
-
-  // Create and trigger a download link
-  const link = document.createElement('a');
-  link.href = resumeUrl;
-  link.target = '_blank';
-  link.rel = 'noopener noreferrer';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  fetch(`${baseUrl}/resume.pdf`)
+    .then(response => response.blob())
+    .then(blob => {
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    })
+    .catch(error => {
+      console.error('Error downloading resume:', error);
+    });
 };
 
 const links = () => {
