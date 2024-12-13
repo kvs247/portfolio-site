@@ -10,7 +10,7 @@ import { Typography } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
 import { useMediaQuery } from '@mui/material';
 
-import resume_pdf from '/resume.pdf';
+// import resume_pdf from '/resume.pdf';
 import github_img from '../assets/github.png';
 import linkedin_img from '../assets/linkedin.png';
 
@@ -51,7 +51,7 @@ const navLink = (toId, text) => {
 };
 
 const handleClickResume = () => {
-  window.open(resume_pdf, "_blank");
+  window.open("/resume.pdf", "_blank");
 };
 
 const links = () => {
