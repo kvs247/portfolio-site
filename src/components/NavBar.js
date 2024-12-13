@@ -10,7 +10,7 @@ import { Typography } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
 import { useMediaQuery } from '@mui/material';
 
-import resume_pdf from '../assets/resume.pdf';
+import resume_pdf from '../assets/resume.pdf?url';
 import github_img from '../assets/github.png';
 import linkedin_img from '../assets/linkedin.png';
 
