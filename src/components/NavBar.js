@@ -51,23 +51,8 @@ const navLink = (toId, text) => {
 };
 
 const handleClickResume = () => {
-  const baseUrl = window.location.origin;
-  fetch(`${baseUrl}/resume.pdf`)
-    .then(response => response.blob())
-    .then(blob => {
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    })
-    .catch(error => {
-      console.error('Error downloading resume:', error);
-    });
+  const resumeUrl = "https://kvs-resume.s3.amazonaws.com/Resume_WIP.pdf"
+  window.location.href = resumeUrl;
 };
 
 const links = () => {
