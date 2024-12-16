@@ -5,9 +5,8 @@ import chess_img from '../assets/chess.png';
 function Chess() {
     return (
         <ProjectPage
-          title='Chess Is Hard'
-          description='Play chess with other users and save/view game data. Includes castling, en passant capture, pawn promotion, and
-          all win/draw scenarios'
+          title='Chess CLI Application'
+          description=''
           links={[
             ['GitHub', 'https://github.com/kvschneider0/chess'],
             ['Demo', 'https://youtu.be/43IuuSmvnHs'],

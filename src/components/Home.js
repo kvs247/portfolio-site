@@ -11,7 +11,7 @@ function Home () {
           <Intro />
           <About />
           <Skills />
-          <Projects />
+          {/* <Projects /> */}
           <Contact />
         </>
     );

@@ -10,7 +10,6 @@ import { Typography } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
 import { useMediaQuery } from '@mui/material';
 
-// import resume_pdf from '/resume.pdf';
 import github_img from '../assets/github.png';
 import linkedin_img from '../assets/linkedin.png';
 
@@ -25,7 +24,6 @@ const navLink = (toId, text) => {
         onClick={() => {
           if (window.location.pathname !== '/') {
             window.location.href = '/#' + toId;
-            // scroll.scrollTo('/#' + toId)
             setTimeout(() => {
               const element = document.getElementById(toId);
               if (element) {
@@ -61,7 +59,7 @@ const links = () => {
       {navLink('intro', 'HOME')}
       {navLink('about', 'ABOUT')}
       {navLink('skills', 'SKILLS')}
-      {navLink('projects', 'PROJECTS')}
+      {/* {navLink('projects', 'PROJECTS')} */}
       {navLink('contact', 'CONTACT')}
       
       <Typography
@@ -79,7 +77,7 @@ const links = () => {
         RESUME
       </Typography>
 
-      <Link href="https://github.com/kvschneider0" target="_blank">
+      <Link href="https://github.com/kvs247" target="_blank">
         <Box component="img" src={github_img} alt="" sx={{ mx: 2, height: '2rem' }} />
       </Link>
 
